@@ -7,16 +7,28 @@
     <title>Document</title>
 </head>
 <body>
+    
     <audio src ="https://mainline.i3s.unice.fr/mooc/SkywardBound/assets/sounds/humbug.mp3" 
         id="audio_player" controls>
     </audio>  
     <br>
+
+    <!-- it play the audio file -->
     <button type="button" onclick="play_sound().play();"> play the sound</button>
+    <!-- pause the audio file -->
     <button type="button" onclick="play_sound().pause();"> pause the sound</button>
+    <!-- put the audio file at start point -->
     <button type="button" onclick="play_sound().load();"> Reload the sound</button>
-    <button type="button" onclick="play_sound().volumn+=0.1;"> increase volumn of  the sound</button>
-    <button type="button" onclick="play_sound().volumn-=0.1;"> Low the volumn of the sound</button>
+    
+    <!-- increase the volume of audio file. Make sure values shouldn't increase the value 1. if it does so it'll 
+    arise a error -->
+    <button type="button" onclick="play_sound().volume+=0.1;"> increase volumn of  the sound</button>
+    <!-- decrease the volume of audio file -->
+    <button type="button" onclick="play_sound().volume-=0.1;"> Low the volumn of the sound</button>
+    
+    <!-- mute the audio file -->
     <button type="button" onclick="play_sound().muted=true;"> mute on sound</button>
+    <!-- unmute the audio file -->
     <button type="button" onclick="play_sound().muted=false;"> mute off the sound</button>
 
     <script src="scripts.js"></script>
